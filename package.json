@@ -1,8 +1,9 @@
 {
   "name": "node-quickfix",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "scripts": {
-    "preinstall": "npm install nan && node-gyp clean && node-gyp configure && node-gyp build",
+    "configure": "node-gyp configure",
+    "build": "node-gyp build",
     "preuninstall": "rm -rf build/*",
     "test": "mocha"
   },
@@ -12,13 +13,12 @@
     "name": "Kermen Deol",
     "email": "kermen.deol@electronifie.com"
   },
-  "dependencies": {
-    "nan": "^2.8.0"
-  },
   "devDependencies": {
     "dateformat": "^1.0.8",
     "mocha": "^2.2.5",
     "mocha-jenkins-reporter": "^0.1.9",
+    "nan": "^2.8.0",
+    "node-gyp": "^3.6.2",
     "segfault-handler": "^1.0.0",
     "should": "^6.0.3"
   },
